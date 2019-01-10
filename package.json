@@ -1,13 +1,20 @@
 {
   "name": "vue-loading-rx",
   "version": "0.0.1",
-  "description": "vue-loading",
-  "main": "/dist/vue-loading.js",
+  "description": "loading directive for vue",
   "author": "rxdey",
   "license": "MIT",
   "files": [
     "dist",
     "src"
+  ],
+  "homepage": "https://github.com/Rxdey/vue-loading",
+  "bugs": "https://github.com/Rxdey/vue-loading/issues",
+  "main": "dist/vue-loading.js",
+  "keywords": [
+    "vue",
+    "loading",
+    "directive"
   ],
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --hot --config ./build/webpack.dev.conf.js",
@@ -51,5 +58,7 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-loading-rx": "0.0.1"
+  }
 }

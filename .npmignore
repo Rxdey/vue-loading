@@ -2,3 +2,5 @@ node_modules
 build
 example
 static
+.idea
+.gitignore

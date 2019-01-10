@@ -8,14 +8,14 @@ function resolve(dir) {
 }
 base.devtool = '#source-map';
 base.mode = 'production';
-// base.plugins.push(
-//   new MiniCssExtractPlugin({
-//     // Options similar to the same options in webpackOptions.output
-//     // both options are optional
-//     filename: './[name].[hash].css',
-//     chunkFilename: './[id].[hash].css'
-//   })
-// );
+base.plugins.push(
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: './[name].css',
+    chunkFilename: './[id].css'
+  })
+);
 base.optimization = {
   minimizer: [
     new UglifyJsPlugin({
@@ -33,12 +33,12 @@ base.module.rules.push({
   test: /\.(less|css)$/,
   use: [
     // 'css-hot-loader', //支持热更新
-    // {
-    //   loader: MiniCssExtractPlugin.loader,
-    //   options: {
-    //     publicPath: '../'
-    //   }
-    // },
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        publicPath: '../'
+      }
+    },
     {
       loader: 'css-loader',
       options: { modules: false }

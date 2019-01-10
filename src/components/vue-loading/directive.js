@@ -1,6 +1,5 @@
 // import Vue from 'vue';
 import Loading from './loading.vue';
-
 const vueLoading = Vue => {
   const Mask = Vue.extend(Loading);
   const toggleLoading = (el, binding) => {
@@ -47,4 +46,4 @@ const vueLoading = Vue => {
   };
 };
 
-export default vueLoading
+export default vueLoading;
