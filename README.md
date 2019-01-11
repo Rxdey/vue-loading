@@ -31,3 +31,5 @@ Vue.use(vueLoader, 'loading');
   <div class="demo1" v-loading.full="{background: 'rgba(255,255,255,.5)', show: isLoading3}" >其他配置</div>
 </template>
 ```
+
+## [example](https://rxdey.github.io/vue-loading/demo/index.html)
