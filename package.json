@@ -18,7 +18,8 @@
   ],
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --hot --config ./build/webpack.dev.conf.js",
-    "build": "webpack --progress --color --config ./build/webpack.conf.js"
+    "build": "webpack --progress --color --config ./build/webpack.conf.js",
+    "demo": "webpack --progress --color --config ./build/webpack.example.js"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.2",

@@ -2,6 +2,7 @@ const base = require('./webpack.base.conf');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 function resolve(dir) {
   return path.join(__dirname, '../', dir);
@@ -9,6 +10,11 @@ function resolve(dir) {
 base.devtool = '#source-map';
 base.mode = 'production';
 base.plugins.push(
+  new CleanWebpackPlugin(['dist'], {
+    root: path.resolve(__dirname, '../'), //根目录
+    verbose: true, //开启在控制台输出信息
+    dry: false //启用删除文件
+  }),
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
